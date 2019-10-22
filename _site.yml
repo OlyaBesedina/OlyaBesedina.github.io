@@ -7,10 +7,10 @@ navbar:
       href: about.html
     - text: Examples
       menu:
-     - text: "Plotly"
-       href: plotly.html
-     - text: "Dashboard"
-       href: dashboard.html
+      - text: "Plotly"
+        href: plotly.html
+      - text: "Dashboard"
+        href: dashboard/dashboard.html
     - icon: fa-envelope fa-lg
       href: mailto:<skyblue6384@gmail.com>
     - icon: fa-github fa-lg
