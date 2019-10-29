@@ -1,5 +1,5 @@
 ---
-title: "This is my website"
+title: ""
 output: 
   html_document:
     toc: true
@@ -7,16 +7,18 @@ output:
 ---
 
 
-# My name is Olya Besedina and somethign else about me.
+# My name is Olya Besedina.
+
+and somethign else about me.
 You can read my resume [here](resume.html).
 
-# let's add some links
+# Links to websites
 
-I often use [google](https://google.com) to do **data science**.
+Here is my page on [Linkedin](https://www.linkedin.com/in/olya-besedina-b32206a4/).
 
-## Let's add image
+## Image
 
-Here is my cat
+Here are my birds
 ![](images/name.jpg)
 
 
