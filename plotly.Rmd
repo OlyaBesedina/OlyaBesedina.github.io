@@ -48,7 +48,7 @@ nyc_airbnb %>%
     color = ~price, text = ~text_label, alpha = 0.5)
 
 # mode = "markers" just put a dot, dont connects them
-# text_label added price and rating to the label in addition to long and lag
+# text_label adds price and rating to the label in addition to long and lag
 ```
 
 # boxplot
@@ -58,7 +58,7 @@ nyc_airbnb %>%
   plot_ly(y = ~price, color = ~neighbourhood, type = "box",
           colors = "Set2")
 
-# increasing order in order of price
+# plotting neighborhood in order of increasing price
 # colors = "set2" color
 ```
 
