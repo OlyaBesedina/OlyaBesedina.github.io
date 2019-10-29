@@ -14,7 +14,7 @@ navbar:
     - icon: fa-envelope fa-lg
       href: mailto:<skyblue6384@gmail.com>
     - icon: fa-github fa-lg
-      href: http://github.com/<OlyaBesedina>/
+      href: http://github.com/OlyaBesedina
 output:
   html_document:
     theme: flatly
