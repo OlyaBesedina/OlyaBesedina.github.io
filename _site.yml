@@ -12,9 +12,11 @@ navbar:
       - text: "Dashboard"
         href: dashboard/dashboard.html
     - icon: fa-envelope fa-lg
-      href: mailto:<skyblue6384@gmail.com>
+      href: mailto:<olya.besedina@columbia.edu>
     - icon: fa-github fa-lg
       href: http://github.com/OlyaBesedina
+    - icon: fa-linkedin fa-lg
+      href: https://www.linkedin.com/in/olya-besedina-b32206a4/
 output:
   html_document:
     theme: flatly
