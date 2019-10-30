@@ -10,16 +10,17 @@ output:
 # My name is Olya Besedina.
 
 and somethign else about me.
+
+- I came from the place far far away..
+- I like fit dogs and fat cats
+
 You can read my resume [here](resume.html).
 
-# Links to websites
+## Here are my birds
 
-Here is my page on [Linkedin](https://www.linkedin.com/in/olya-besedina-b32206a4/).
+This is Larry, he was named after Larry David due to uncanny recemblence in looks and behavior.
 
-## Image
-
-Here are my birds
-![](images/name.jpg)
+<img src="images/IMG_7201.jpg" style="width:62%"> ![](https://media.giphy.com/media/SkOHoAarPEoHC/source.gif)
 
 
 
