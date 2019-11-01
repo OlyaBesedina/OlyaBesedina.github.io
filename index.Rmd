@@ -9,12 +9,13 @@ output:
 
 # My name is Olya Besedina.
 
-<div style:"position:relative; overflow:hidden;">
+<div style="position:relative; overflow:hidden;">
 <img src="images/IMG_7368.jpg" style="width:62%; float:left"> 
 
+<div style="position:relative; overflow:hidden;">
 - I am from Kyiv, Ukraine 🇺🇦
 - I like fit dogs and fat cats
-
+</div>
 </div>
 
 
