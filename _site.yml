@@ -7,7 +7,7 @@ navbar:
       href: resume.html
     - text: Examples
       menu:
-      - text: "Description of HW4"
+      - text: "Description for HW4"
         href: hw4_code_and_description.html
       - text: "Dashboard"
         href: dashboard/dashboard.html
