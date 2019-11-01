@@ -9,10 +9,17 @@ output:
 
 # My name is Olya Besedina.
 
-and something else about me.
+<div style:"position:relative; overflow:hidden;">
+<img src="images/IMG_7368.jpg" style="width:62%; float:left"> 
 
-- I came from 
+- I am from Kyiv, Ukraine 🇺🇦
 - I like fit dogs and fat cats
+
+</div>
+
+
+
+
 
 You can read my resume [here](resume.html).
 
@@ -33,6 +40,4 @@ img {
     image-orientation: from-image;
 }
 </style>
-
-
 
