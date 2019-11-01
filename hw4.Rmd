@@ -25,23 +25,20 @@ options(
 ```
 
 
-```{r}
+```{r, dataset}
 data("rest_inspec")
 
 rest_inspec =
   rest_inspec %>%
   filter(grade %in% c("A", "B", "C", "Not Yet Graded"), boro != "Missing") %>% 
   mutate(boro = str_to_title(boro))
+```
 
-# delete?
-data = rest_inspec %>% 
-  filter(str_detect(dba, regex("tequi", ignore_case = TRUE))) %>% 
-  mutate(
-    boro = fct_infreq(boro)) %>% 
-  ggplot(aes(x = boro, fill = grade))+
-  geom_bar()
-  
-# Plot 1
+# Description
+
+Dataset is not tidy, it contains multiple observations for the same restaurant, it does not contain identification number for each inspection and for each place or long and lan, which makes it impossible to deferentiate among chain restaurants if they are locate on the same street. Storing this information in the relational database would provide clarity and simplicity of analysis.
+
+```{r, plot 1}
 grade_over_t = 
   rest_inspec %>% 
   group_by(grade) %>% 
@@ -57,22 +54,9 @@ grade_over_t =
   )
 
 ggplotly(grade_over_t)
-# ___________________________________
+```
 
-# plot 2, delete?
-o = 
-  rest_inspec %>% 
-  select(boro, cuisine_description, grade, inspection_date, dba) %>% 
-  filter(
-    grade %in% c("A", "B", "C", "NA")) %>% 
-  ggplot(aes(x = grade, fill = boro)) +
-  geom_bar(position = "dodge")
-
-ggplotly(o)
-# ________________________
-
-
-
+``` {r, plot 2}
 density = 
   rest_inspec %>% 
   filter(str_detect(cuisine_description, regex ("kosher", ignore_case = TRUE))) %>% 
@@ -86,22 +70,9 @@ density =
   )
 
 ggplotly(density)
+```
 
-
-# delete?
-
-# bar chart
-rest_data = 
-  rest_inspec %>% 
-  distinct(dba, cuisine_description) %>% 
-  count(cuisine_description, sort = TRUE) %>% 
-  head(15)
-  
-rest_data %>% 
-  plot_ly(x = ~ cuisine_description, y = ~n, color = ~ cuisine_description, type = "bar", alpha = 0.8)
-
-# plot 3 - done
-
+```{r, plot 3}
 rest_inspec %>% 
   group_by(cuisine_description, boro) %>% 
   count(cuisine_description, sort = TRUE) %>% 
