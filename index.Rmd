@@ -9,26 +9,30 @@ output:
 
 # My name is Olya Besedina.
 
-and somethign else about me.
+and something else about me.
 
-- I came from the place far far away..
+- I came from 
 - I like fit dogs and fat cats
 
 You can read my resume [here](resume.html).
 
-## Here are my birds
+## My birds
 
 This is Larry, he was named after Larry David due to uncanny recemblence in looks and behavior. I do not know yet if he is neurotic or just has a lot of energy. 
 
-<img src="images/IMG_7340.jpg" style="width:62%"> <img src="images/IMG_7343.jpg" style="width:62%"> 
-
-<img src="images/IMG_7357.jpg" style="width:62%"> 
-
+<img src="images/IMG_7201.jpg" style="width:62%"> 
 ![](https://media.giphy.com/media/SkOHoAarPEoHC/source.gif)
 
+<img src="images/IMG_7343.jpg" style="width:80%; image-orientation: from-image;"> 
 
+<img src="images/IMG_7357.jpg" style="width:62%; image-orientation: from-image;"> 
 
-
+<style type="text/css">
+img {
+    max-width: 100%;
+    image-orientation: from-image;
+}
+</style>
 
 
 
