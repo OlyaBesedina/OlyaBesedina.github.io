@@ -46,10 +46,15 @@ grade_over_t =
   rest_inspec %>% 
   group_by(grade) %>% 
   filter(
-    grade %in% c("A", "B", "C"),
     str_detect(dba, regex("tequil", ignore_case = TRUE))) %>% 
   ggplot(aes(x = inspection_date, y = grade, color = dba, group = dba))+
-  geom_point() + geom_line()
+  geom_point() + geom_line() +
+  labs (
+    title = "Grades Over Time For Tequila Bars",
+    x = "Year",
+    y = "Grade",
+    caption = "Data from nyc.gov"
+  )
 
 ggplotly(grade_over_t)
 # ___________________________________
@@ -72,7 +77,13 @@ density =
   rest_inspec %>% 
   filter(str_detect(cuisine_description, regex ("kosher", ignore_case = TRUE))) %>% 
   ggplot(aes(x = boro, fill = grade)) +
-  geom_density(alpha = .5)
+  geom_density(alpha = .5) +
+  labs (
+    title = "Distribution Of Grades For Kosher Restaurants Among Boros ",
+    x = "Boro",
+    y = "Density",
+    caption = "Data from nyc.gov"
+  )
 
 ggplotly(density)
 
@@ -89,17 +100,14 @@ rest_data =
 rest_data %>% 
   plot_ly(x = ~ cuisine_description, y = ~n, color = ~ cuisine_description, type = "bar", alpha = 0.8)
 
-# plot 3
+# plot 3 - done
 
-rest_data_2 = 
-  rest_inspec %>% 
+rest_inspec %>% 
   group_by(cuisine_description, boro) %>% 
-  count(cuisine_description, sort = TRUE)
-  
-
-rest_data_2 %>% 
-  plot_ly(x = ~ cuisine_description, y = ~n, color = ~ boro, type = "bar")
-
+  count(cuisine_description, sort = TRUE) %>% 
+  plot_ly(x = ~ cuisine_description, y = ~n, color = ~ boro, type = "bar") %>% 
+    layout(
+    title = "Total Count Of Top 15 Most Popular Cuisines By Boro")
 ```
 
 
