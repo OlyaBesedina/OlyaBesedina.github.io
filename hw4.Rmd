@@ -1,0 +1,105 @@
+```{r setup, include=FALSE}
+library(tidyverse)
+library(rvest)
+library(p8105.datasets)
+library(plotly)
+
+
+knitr::opts_chunk$set(
+ 	echo = TRUE,
+ 	warning = FALSE,
+ 	fig.width = 8, 
+   fig.height = 6,
+   out.width = "90%"
+ )
+
+options(
+   ggplot2.continuous.colour = "viridis",
+   ggplot2.continuous.fill = "viridis"
+ )
+
+ scale_colour_discrete = scale_colour_viridis_d
+ scale_fill_discrete = scale_fill_viridis_d
+
+ theme_set(theme_minimal() + theme(legend.position = "bottom"))
+```
+
+
+```{r}
+data("rest_inspec")
+
+rest_inspec =
+  rest_inspec %>%
+  filter(grade %in% c("A", "B", "C", "Not Yet Graded"), boro != "Missing") %>% 
+  mutate(boro = str_to_title(boro))
+
+# delete?
+data = rest_inspec %>% 
+  filter(str_detect(dba, regex("tequi", ignore_case = TRUE))) %>% 
+  mutate(
+    boro = fct_infreq(boro)) %>% 
+  ggplot(aes(x = boro, fill = grade))+
+  geom_bar()
+  
+# Plot 1
+grade_over_t = 
+  rest_inspec %>% 
+  group_by(grade) %>% 
+  filter(
+    grade %in% c("A", "B", "C"),
+    str_detect(dba, regex("tequil", ignore_case = TRUE))) %>% 
+  ggplot(aes(x = inspection_date, y = grade, color = dba, group = dba))+
+  geom_point() + geom_line()
+
+ggplotly(grade_over_t)
+# ___________________________________
+
+# plot 2, delete?
+o = 
+  rest_inspec %>% 
+  select(boro, cuisine_description, grade, inspection_date, dba) %>% 
+  filter(
+    grade %in% c("A", "B", "C", "NA")) %>% 
+  ggplot(aes(x = grade, fill = boro)) +
+  geom_bar(position = "dodge")
+
+ggplotly(o)
+# ________________________
+
+
+
+density = 
+  rest_inspec %>% 
+  filter(str_detect(cuisine_description, regex ("kosher", ignore_case = TRUE))) %>% 
+  ggplot(aes(x = boro, fill = grade)) +
+  geom_density(alpha = .5)
+
+ggplotly(density)
+
+
+# delete?
+
+# bar chart
+rest_data = 
+  rest_inspec %>% 
+  distinct(dba, cuisine_description) %>% 
+  count(cuisine_description, sort = TRUE) %>% 
+  head(15)
+  
+rest_data %>% 
+  plot_ly(x = ~ cuisine_description, y = ~n, color = ~ cuisine_description, type = "bar", alpha = 0.8)
+
+# plot 3
+
+rest_data_2 = 
+  rest_inspec %>% 
+  group_by(cuisine_description, boro) %>% 
+  count(cuisine_description, sort = TRUE)
+  
+
+rest_data_2 %>% 
+  plot_ly(x = ~ cuisine_description, y = ~n, color = ~ boro, type = "bar")
+
+```
+
+

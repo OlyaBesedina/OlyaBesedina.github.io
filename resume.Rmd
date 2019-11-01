@@ -8,11 +8,7 @@ output:
 
 # Here is my resume 
 
-```{r, out.width="0.3\\linewidth", include=TRUE, fig.align="center", fig.cap=c(" "), echo=FALSE}
-knitr::include_graphics("./images/Resume.pdf")
-```
-
-
+<img src = "Resume.pdf" style ="width:75%">
 
 
 
