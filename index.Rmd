@@ -6,34 +6,60 @@ output:
     toc_float: true
 ---
 
+# My name is Olya Besedina       
 
-# My name is Olya Besedina.
 
-<div style="position:relative; overflow:hidden;">
-<img src="images/IMG_7368.jpg" style="width:62%; float:left"> 
 
 <div style="position:relative; overflow:hidden;">
-- I am from Kyiv, Ukraine 🇺🇦
-- I like fit dogs and fat cats
+<img src="images/IMG_7368.jpg" style="width:45%; float:left"> 
+
+<div style="position:relative; overflow:hidden;">
+
+- I am from Kyiv, Ukraine 🇺🇦  
+
+- Before coming to Columbia I was pursuing a degree in Biochemistry at Pace University
+
+- Before studying at Pace University I was pursuing a degree in Pharmacy School at UCONN
+
+- Before UCONN I was attending the Pharmacy School in Kyiv
+
+- You can talk to me about:
+
+  Fit dogs and fat cats
+
+  Art Deco and Neoclassicism in architecture and interior design 
+  
+  Travel
+
+- You can read my resume [here](resume.html).
+
 </div>
 </div>
 
 
 
 
+##
 
-You can read my resume [here](resume.html).
 
-## My birds
+
+# My birds
 
 This is Larry, he was named after Larry David due to uncanny recemblence in looks and behavior. I do not know yet if he is neurotic or just has a lot of energy. 
 
-<img src="images/IMG_7201.jpg" style="width:62%"> 
-![](https://media.giphy.com/media/SkOHoAarPEoHC/source.gif)
+<img src="images/IMG_7343.jpg" style="width:62%">   
 
-<img src="images/IMG_7343.jpg" style="width:80%; image-orientation: from-image;"> 
+##
 
-<img src="images/IMG_7357.jpg" style="width:62%; image-orientation: from-image;"> 
+![](https://media.giphy.com/media/SkOHoAarPEoHC/source.gif)  
+
+## 
+
+This is Barack. Just because. He is very kind and calm. This is all that he does.  
+
+<img src="images/IMG_7357.jpg" style="width:62%"> 
+
+
 
 <style type="text/css">
 img {
